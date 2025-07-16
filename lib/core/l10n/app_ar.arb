@@ -1,4 +1,5 @@
 {
+  "invalid_route": "لا يوجد مسار صالح" ,
   "login": "تسجيل الدخول" ,
   "email": "البريد الالكتروني",
   "enter_your_email": "أدخل بريدك الإلكتروني",
@@ -6,7 +7,7 @@
     "enter_password": "أدخل كلمة المرور",
   "remember_me": "تذكرني",
     "forgot_password": "هل نسيت كلمة المرور؟",
-  "don't_have_an_account": "ليس لديك حساب؟",
+  "dont_have_an_account": "ليس لديك حساب؟",
     "sign_up": "إنشاء حساب",
   "empty_input_validation": "هذا الحقل مطلوب",
   "input_not_valid": "هذا الإدخال غير صحيح",
@@ -22,11 +23,11 @@
   "already_have_an_account": "لديك حساب بالفعل؟",
 "confirm_password_not_valid": "كلمة المرور غير متطابقة",
   "enter_your_email_associated": "أدخل بريدك الإلكتروني المرتبط بالحساب",
-  "continue": "متابعة" ,
-  "didn't_receive_code": "لم تستلم الرمز؟",
+  "continue_btn": "متابعة" ,
+  "didnt_receive_code": "لم تستلم الرمز؟",
   "resend": "إعادة الارسال",
   "invalid_code": "الرمز غير صالح",
   "reset_passsword": "إعادة تعيين كلمة المرور",
   "new_password": "كلمة مرور جديدة",
-  "password_requirements": "كلمة المرور يجب ألا تكون فارغة ويجب أن تحتوي على 6 أحرف على الأقل مع حرف كبير ورقم واحد على الأقل",
+  "password_requirements": "كلمة المرور يجب ألا تكون فارغة ويجب أن تحتوي على 6 أحرف على الأقل مع حرف كبير ورقم واحد على الأقل"
 }

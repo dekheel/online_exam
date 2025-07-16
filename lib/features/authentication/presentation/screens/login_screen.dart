@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:online_exam/core/constants/const.dart';
 import 'package:online_exam/core/di/di.dart';
 import 'package:online_exam/core/l10n/app_localizations.dart';
 import 'package:online_exam/core/providers/app_config_provider.dart';
 
-
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,14 @@ class SignInScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(localizations.appTitle),
+            TextField(
+              style: GoogleFonts.inter(
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+              decoration: InputDecoration(labelText: localizations.email),
+            ),
             FilledButton(
               onPressed: () {
                 if (getIt<AppConfigProvider>().isEnglish()) {
@@ -25,7 +31,7 @@ class SignInScreen extends StatelessWidget {
                   getIt<AppConfigProvider>().changeLanguage(AppConst.enLocale);
                 }
               },
-              child: Text(localizations.appTitle),
+              child: Text(localizations.login),
             ),
           ],
         ),

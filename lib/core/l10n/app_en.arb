@@ -1,5 +1,6 @@
 
   {
+    "invalid_route": "Invalid page",
     "login": "Login",
     "email": "Email",
     "enter_your_email": "Enter your email",
@@ -7,7 +8,7 @@
     "enter_password": "Enter password",
     "remember_me": "Remember me",
     "forgot_password": "Forgot password?",
-    "don't_have_an_account": "Don't have an account?",
+    "dont_have_an_account": "Don't have an account?",
     "sign_up": "Sign up",
     "empty_input_validation": "This field is required",
     "input_not_valid": "This input is not valid",
@@ -23,8 +24,8 @@
     "already_have_an_account": "Already have an account?",
     "confirm_password_not_valid": "Password does not match",
     "enter_your_email_associated": "Enter your email associated with the account",
-    "continue": "Continue",
-    "didn't_receive_code": "Didn't receive the code?",
+    "continue_btn": "Continue",
+    "didnt_receive_code": "Didn't receive the code?",
     "resend": "Resend",
     "invalid_code": "Invalid code",
     "reset_passsword": "Reset password",

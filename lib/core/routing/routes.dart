@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:online_exam/features/authentication/presentation/screens/sign_in_screen.dart';
+import 'package:online_exam/core/l10n/app_localizations.dart';
+import 'package:online_exam/features/authentication/presentation/screens/login_screen.dart';
 
 /// Easy to add new routes by adding constants and cases
 /// Centralized management of all app navigation
@@ -18,12 +19,14 @@ abstract class AppRoutes {
     */
     switch (settings.name) {
       case AppRoutes.login:
-        return MaterialPageRoute(builder: (context) => const SignInScreen());
+        return MaterialPageRoute(builder: (context) => const LoginScreen());
       default:
         return MaterialPageRoute(
           builder:
               (context) => Scaffold(
-                body: Center(child: Text("No Page")),
+                body: Center(
+                  child: Text(AppLocalizations.of(context)!.invalid_route),
+                ),
               ), // Replace with your NotFoundPage widget
         );
     }

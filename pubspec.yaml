@@ -41,9 +41,10 @@ dependencies:
   dio:
   json_annotation: ^4.9.0
   shared_preferences: 
-  provider: 
-
-  # The following adds the Cupertino Icons font to your application.
+  provider:
+  flutter_screenutil: ^5.9.3
+  google_fonts: ^6.2.1
+# The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   intl:
