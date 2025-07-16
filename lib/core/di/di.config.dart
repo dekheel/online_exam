@@ -16,7 +16,6 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart' as _i528;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
 import '../providers/app_config_provider.dart' as _i56;
-import '../validator/validator.dart' as _i468;
 import 'modules/dio_module.dart' as _i983;
 import 'modules/shared_preferences_module.dart' as _i813;
 
@@ -33,7 +32,6 @@ extension GetItInjectableX on _i174.GetIt {
       () => sharedPreferencesModule.provideSharedPreferences(),
       preResolve: true,
     );
-    gh.singleton<_i468.AppValidators>(() => _i468.AppValidators());
     gh.lazySingleton<_i361.Dio>(() => dioModule.provideDio());
     gh.lazySingleton<_i528.PrettyDioLogger>(
       () => dioModule.providePrettyDioLogger(),

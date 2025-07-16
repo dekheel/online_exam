@@ -2,8 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:injectable/injectable.dart';
 import '../../core/l10n/app_localizations.dart';
 
-@singleton
-class AppValidators {
+abstract class AppValidators {
   static String? validateEmail(BuildContext context, String? val) {
     RegExp emailRegex = RegExp(
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
