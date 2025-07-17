@@ -5,6 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 @singleton
 class AppConfigProvider extends ChangeNotifier {
+
+
   SharedPreferences? sharedPreferences;
   String? locale;
 

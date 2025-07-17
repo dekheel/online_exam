@@ -100,4 +100,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get password_requirements => 'كلمة المرور يجب ألا تكون فارغة ويجب أن تحتوي على 6 أحرف على الأقل مع حرف كبير ورقم واحد على الأقل';
+
+  @override
+  String get server_error => 'مشكلة بالخادم';
+
+  @override
+  String get network_error => 'لا يوجد اتصال بالشبكة';
+
+  @override
+  String get user_created_successfully => 'تم إنشاء الحساب بنجاح';
+
+  @override
+  String get ok => 'حسناً';
 }

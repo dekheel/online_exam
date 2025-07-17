@@ -100,4 +100,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get password_requirements => 'Password must not be empty and must contain at least 6 characters with one uppercase letter and at least one number';
+
+  @override
+  String get server_error => 'Server error';
+
+  @override
+  String get network_error => 'Network error';
+
+  @override
+  String get user_created_successfully => 'User created successfully';
+
+  @override
+  String get ok => 'OK';
 }

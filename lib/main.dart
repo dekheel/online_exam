@@ -34,12 +34,13 @@ class MyApplication extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: AppLocalizations.of(context)?.login,
           onGenerateRoute: AppRoutes.onGenerateRoute,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           locale: Locale(appConfigProvider.locale!), // Default locale
-          initialRoute: AppRoutes.login,
+          initialRoute: AppRoutes.signUp,
           theme: AppTheme.lightTheme,
         );
       },

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_exam/core/l10n/app_localizations.dart';
 import 'package:online_exam/features/authentication/presentation/screens/login_screen.dart';
+import 'package:online_exam/features/authentication/presentation/screens/register_screen.dart';
 
 /// Easy to add new routes by adding constants and cases
 /// Centralized management of all app navigation
@@ -20,6 +21,9 @@ abstract class AppRoutes {
     switch (settings.name) {
       case AppRoutes.login:
         return MaterialPageRoute(builder: (context) => const LoginScreen());
+      case AppRoutes.signUp:
+        return MaterialPageRoute(builder: (context) => RegisterScreen());
+
       default:
         return MaterialPageRoute(
           builder:

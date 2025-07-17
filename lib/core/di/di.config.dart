@@ -15,8 +15,20 @@ import 'package:injectable/injectable.dart' as _i526;
 import 'package:pretty_dio_logger/pretty_dio_logger.dart' as _i528;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
+import '../../features/authentication/data/data_sources/auth_remote_data_source_impl.dart'
+    as _i104;
+import '../../features/authentication/data/repositories/auth_repository_impl.dart'
+    as _i317;
+import '../../features/authentication/domain/repositories/auth_data_source_contract/auth_remote_data_source.dart'
+    as _i261;
+import '../../features/authentication/domain/repositories/auth_repositories/auth_repository_contract.dart'
+    as _i733;
+import '../../features/authentication/domain/usecases/register_use_case.dart'
+    as _i377;
+import '../../features/authentication/presentation/cubit/register_view_model.dart'
+    as _i128;
+import '../Api/api_manager.dart' as _i1039;
 import '../providers/app_config_provider.dart' as _i56;
-import '../validator/validator.dart' as _i468;
 import 'modules/dio_module.dart' as _i983;
 import 'modules/shared_preferences_module.dart' as _i813;
 
@@ -33,13 +45,25 @@ extension GetItInjectableX on _i174.GetIt {
       () => sharedPreferencesModule.provideSharedPreferences(),
       preResolve: true,
     );
-    gh.singleton<_i468.AppValidators>(() => _i468.AppValidators());
+    gh.singleton<_i1039.ApiManager>(() => _i1039.ApiManager());
     gh.lazySingleton<_i361.Dio>(() => dioModule.provideDio());
     gh.lazySingleton<_i528.PrettyDioLogger>(
       () => dioModule.providePrettyDioLogger(),
     );
+    gh.factory<_i261.AuthRemoteDataSource>(
+      () => _i104.AuthRemoteDataSourceImpl(apiManager: gh<_i1039.ApiManager>()),
+    );
+    gh.factory<_i733.AuthRepositoryContract>(
+      () => _i317.AuthRepositoryImpl(gh<_i261.AuthRemoteDataSource>()),
+    );
+    gh.factory<_i377.RegisterUseCase>(
+      () => _i377.RegisterUseCase(gh<_i733.AuthRepositoryContract>()),
+    );
     gh.singleton<_i56.AppConfigProvider>(
       () => _i56.AppConfigProvider(gh<_i460.SharedPreferences>()),
+    );
+    gh.factory<_i128.RegisterViewModel>(
+      () => _i128.RegisterViewModel(gh<_i377.RegisterUseCase>()),
     );
     return this;
   }

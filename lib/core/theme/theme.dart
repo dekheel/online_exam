@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:online_exam/core/colors/colors.dart';
 
 abstract class AppTheme {
@@ -24,7 +25,13 @@ abstract class AppTheme {
         style: FilledButton.styleFrom(
           disabledBackgroundColor: AppColors.grey,
           backgroundColor: colorScheme.primary,
-          foregroundColor: colorScheme.onPrimary,
+          foregroundColor: AppColors.white,
+          disabledForegroundColor: AppColors.white,
+          textStyle: GoogleFonts.inter(
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w500,
+            color: AppColors.white,
+          ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100.r),
           ),
@@ -42,7 +49,7 @@ abstract class AppTheme {
           color: colorScheme.secondary,
         ),
         bodySmall: TextStyle(
-          fontSize: 13.sp,
+          fontSize: 14.sp,
           fontWeight: FontWeight.w400,
           color: colorScheme.secondary,
         ),
@@ -53,7 +60,17 @@ abstract class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        labelStyle: TextStyle(color: AppColors.grey),
+        labelStyle: GoogleFonts.inter(
+          color: AppColors.grey,
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
+        ),
+
+        hintStyle: GoogleFonts.inter(
+          color: AppColors.grey,
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
+        ),
         fillColor: colorScheme.surface,
         border: outlineInputBorder(borderColor: AppColors.grey),
         enabledBorder: outlineInputBorder(borderColor: AppColors.grey),

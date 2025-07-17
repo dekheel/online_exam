@@ -1,9 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:injectable/injectable.dart';
 import '../../core/l10n/app_localizations.dart';
 
-@singleton
-class AppValidators {
+abstract class AppValidators {
   static String? validateEmail(BuildContext context, String? val) {
     RegExp emailRegex = RegExp(
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
@@ -48,7 +46,7 @@ class AppValidators {
     RegExp usernameRegex = RegExp(r'^[a-zA-Z0-9,.-]+$');
     if (val == null || val.isEmpty) {
       return AppLocalizations.of(context)!.empty_input_validation;
-    } else if (!usernameRegex.hasMatch(val)) {
+    } else if (!usernameRegex.hasMatch(val) || val.length < 3) {
       return AppLocalizations.of(context)!.input_not_valid;
     } else {
       return null;

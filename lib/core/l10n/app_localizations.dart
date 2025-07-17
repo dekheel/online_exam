@@ -280,6 +280,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Password must not be empty and must contain at least 6 characters with one uppercase letter and at least one number'**
   String get password_requirements;
+
+  /// No description provided for @server_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Server error'**
+  String get server_error;
+
+  /// No description provided for @network_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Network error'**
+  String get network_error;
+
+  /// No description provided for @user_created_successfully.
+  ///
+  /// In en, this message translates to:
+  /// **'User created successfully'**
+  String get user_created_successfully;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get ok;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
